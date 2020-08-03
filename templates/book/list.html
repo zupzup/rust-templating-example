@@ -1,0 +1,27 @@
+{% include "../header.html" %}
+<a href="/books/new">Add Book</a>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>author</th>
+        <th>language</th>
+        <th>pages</th>
+        <th>added</th>
+        <th>edit</th>
+        <th>delete</th>
+    </tr>
+{% for book in books %}
+    <tr>
+        <td>{{ book.id }}</td>
+        <td>{{ book.name }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.language }}</td>
+        <td>{{ book.pages }}</td>
+        <td>{{ book.added_at }}</td>
+        <td><a href="{{"/books/edit/{}"|format(book.id)}}">edit</a></td>
+        <td><a href="{{"/books/delete/{}"|format(book.id)}}">delete</a></td>
+    <?tr>
+{% endfor %}
+</table>
+{% include "../footer.html" %}

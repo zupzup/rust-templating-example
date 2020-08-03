@@ -1,0 +1,26 @@
+{% include "../header.html" %}
+<h2>Add New Book</h2>
+<table>
+    <form action="/books/new" method="post">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="name" /></td>
+        <tr/>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" name="author" /></td>
+        <tr/>
+        <tr>
+            <td>Language:</td>
+            <td><input type="text" name="language" value="de" /></td>
+        <tr/>
+        <tr>
+            <td>Pages:</td>
+            <td><input type="text" name="pages" value="300" /></td>
+        <tr/>
+        <tr>
+            <td colspan="2"><button type="submit">Send</button></td>
+        <tr/>
+    </form>
+</table>
+{% include "../footer.html" %}
